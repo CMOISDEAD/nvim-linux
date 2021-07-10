@@ -18,7 +18,7 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 let g:ariline_powerline_fonts = 1
-let g:ariline_theme='onedark'
+let g:ariline_theme='tokyonight'
 
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -34,7 +34,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 " Switch to your current theme
-let g:airline_theme = 'onedark'
+let g:airline_theme = 'tokyonight'
 
 " Always show tabs
 set showtabline=2
@@ -45,7 +45,8 @@ let g:signify_sign_delete            = '_'
 let g:signify_sign_delete_first_line = '‾'
 let g:signify_sign_change            = '~'
 
-
+"emmet integration
+let g:user_emmet_leader_key='<C-Z>'
 
 "treesitter
 lua <<EOF
@@ -72,9 +73,10 @@ let g:onedark_hide_endofbuffer=1
 let g:onedark_terminal_italics=1
 let g:onedark_termcolors=256
 let g:gruvbox_dark_hard="medium"
+let g:tokyonight_style = "storm"
+let g:tokyonight_italic_functions = 1
 syntax on
-colorscheme gruvbox
-
+colorscheme tokyonight
 
 " checks if your terminal has 24-bit color support
 if (has("termguicolors"))

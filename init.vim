@@ -17,6 +17,7 @@ set encoding=utf-8
 set showmatch
 set sw=2
 set relativenumber
+set termguicolors
 let mapleader = " "
 set laststatus=2
 set backspace=2
@@ -61,6 +62,7 @@ let g:indentLine_char = '▏'
 "abrir Nerdtree
 "open nerdtree
 nmap <Leader>e :NERDTreeToggle<CR>
+nmap <Leader>r :NERDTreeFocus<CR>
 
 "open cocExplorer 
 "Buscar dos carácteres con easymotion
