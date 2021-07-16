@@ -44,7 +44,7 @@ source $HOME/.config/nvim/plugins/plug-config.vim
 "--------------------------------Plugins Config--------------------------------------------
 "save file
 "guardar archivo
-nmap <leader>w :w <CR>
+nmap <leader>fs :w <CR>
 "cerrar ventana
 "close current  window
 nmap <C-w> :q <CR>
@@ -53,7 +53,7 @@ nmap <leader>so :so%<CR>
 "search commands 
 "comandos de busqueda
 nmap <leader>gs  :CocSearch
-nmap <leader>fs :FZF<CR>
+nmap <leader>fz :FZF<CR>
 nmap <leader>rg :Rg<CR>
 
 "configuracion de tabs

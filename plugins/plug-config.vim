@@ -18,7 +18,7 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 let g:ariline_powerline_fonts = 1
-let g:ariline_theme='tokyonight'
+let g:ariline_theme='onedark'
 
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -34,7 +34,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
 " Switch to your current theme
-let g:airline_theme = 'tokyonight'
+let g:airline_theme = 'onedark'
 
 " Always show tabs
 set showtabline=2
@@ -76,7 +76,7 @@ let g:gruvbox_dark_hard="medium"
 let g:tokyonight_style = "storm"
 let g:tokyonight_italic_functions = 1
 syntax on
-colorscheme tokyonight
+colorscheme onedark
 
 " checks if your terminal has 24-bit color support
 if (has("termguicolors"))

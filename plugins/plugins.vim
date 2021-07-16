@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
 " Temas
 " Themes
 Plug 'ghifarit53/tokyonight-vim'
-Plug 'cocopon/iceberg.vim'
+Plug 'joshdick/onedark.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " "IDE
