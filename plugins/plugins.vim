@@ -1,17 +1,14 @@
-"Plugins
 call plug#begin('~/.vim/plugged')
-" Temas
 " Themes
-Plug 'ghifarit53/tokyonight-vim'
-Plug 'joshdick/onedark.vim'
+Plug 'sainnhe/everforest'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " "IDE
 Plug 'easymotion/vim-easymotion'
-"Navigate with C-h C-l C-j C-k
-"Navegar con C-h C-l C-j C-k
 
 "NERDTREE
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'kristijanhusak/defx-icons'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
@@ -27,7 +24,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "Close pairs () [] {} ''
-"Cerrar los pares () [] {} '' 
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 
@@ -41,7 +37,7 @@ Plug 'terryma/vim-multiple-cursors'
 "Have the indent lines 
 Plug 'yggdroot/indentline'
 
-"Git Integration ______________
+"Git Integration
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -50,11 +46,19 @@ Plug 'junegunn/gv.vim'
 "Smooth srolling in vim
 Plug 'psliwka/vim-smoothie'
 
-"Startify
-Plug 'mhinz/vim-startify'
+"Home
+"Plug 'mhinz/vim-startify'
+Plug 'glepnir/dashboard-nvim'
 
-"emmet
+"Emmet
 Plug 'mattn/emmet-vim'
 
-"_____________________________
+"NERDCommenter
+Plug 'preservim/nerdcommenter'
+
+"Denite
+Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+
+"Colorizer
+Plug 'lilydjwg/colorizer'
 call plug#end()
