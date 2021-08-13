@@ -1,5 +1,9 @@
 # Neovim Linux - (My Neovim config for linux)
 
+A neovim configuration oriented to web development, inspired by doom emacs and spacevim
+
+Still in development ❤️
+
 ## Requerimientos
 
 - Neovim 5.0+ (Si no es esa version algunos plugins no tienen soporte)
