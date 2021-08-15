@@ -1,10 +1,11 @@
 "Files
-nmap <leader>fs :w <CR> 
-"nmap <leader>fp denite#custom#var('menu', 'menus', s:menus)<CR>
+nmap <leader>fs :w<CR> 
 
-"Fomrat FIles
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>fb  <Plug>(coc-format-selected)
+"Open configuration direction
+nmap <leader>fp :Defx /home/camilo/.config/nvim/<CR>
+
+"Format Files
+inoremap <C-S>f <Plug>(coc-format-selected)
 
 "Buffers
 nmap <leader>bd :bdelete <CR>
@@ -20,24 +21,24 @@ nnoremap <leader>wl <C-w>l
 nnoremap <leader>ww <C-w>w
 
 " Search
-nmap <leader>ff  :Defx<CR>
+nmap <silent><leader>ff  :Defx<CR> 
 nmap <leader>f.  :Denite file/rec<CR>
 nmap <leader>f-  :Denite buffer<CR>
 nmap <leader>rg  :Rg<CR>
-nmap <Leader>s <Plug>(easymotion-s2)
+nmap <leader>fz  :FZF<CR>
 
 "File tree
-nmap <Leader>ft :NERDTreeToggle<CR>
-nmap <Leader>fT :NERDTreeFocus<CR>
-nmap <Leader>fo :NERDTreeFind<CR>
+nmap <silent><Leader>ft :Defx -split=vertical -direction=topleft<CR>
 
 "Tabs
 nnoremap <silent> <TAB> :bnext<CR>
 nnoremap <silent> <S-TAB> :bprevious<CR>
 
 "Nvim
-nnoremap <leader>qq ZZ<CR>
-nnoremap <leader>qQ ZX<CR>
+nnoremap <leader>qq :<C-u>SessionSave<CR>:wqa<CR>
+nnoremap <leader>QQ :qa<CR>
+nmap <Leader>ss :<C-u>SessionSave<CR>
+nmap <Leader>sl :<C-u>SessionLoad<CR>
 imap jk <Esc>
 imap <C-c> <Esc>l
 
@@ -49,3 +50,6 @@ xnoremap J :move '>+1<CR>gv-gv
 
 vnoremap < <gv
 vnoremap > >gv
+
+"Activate Plugins
+inoremap <leader>mo :IndentLinesToggle<CR>

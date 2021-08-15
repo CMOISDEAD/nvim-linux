@@ -2,20 +2,18 @@
 source $HOME/.config/nvim/plugins/coc-config.vim
 
 "Airline
-" enable tabline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 let g:ariline_powerline_fonts = 1
-let g:ariline_theme='everforest'
+let g:ariline_theme='gruvbox'
 
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
   endif
 
-" airline symbols
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
@@ -23,9 +21,6 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
-
-" Switch to your current theme
-let g:airline_theme = 'everforest'
 
 " Always show tabs
 set showtabline=2
@@ -63,10 +58,10 @@ hi Comment cterm=italic
 let g:onedark_hide_endofbuffer=1
 let g:onedark_terminal_italics=1
 let g:onedark_termcolors=256
-let g:gruvbox_dark_hard="hard"
+let g:gruvbox_contrast_dark="hard"
 let g:everforest_background = "hard"
 syntax on
-colorscheme everforest
+colorscheme gruvbox
 
 " checks if your terminal has 24-bit color support
 if (has("termguicolors"))
@@ -75,7 +70,7 @@ if (has("termguicolors"))
 endif
 
 "Identline
-let g:indentLine_enabled = 1
+let g:indentLine_enabled = 0
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 "Vim Startify
@@ -179,7 +174,7 @@ function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> h defx#do_action('cd', ['..'])
   nnoremap <silent><buffer><expr> ~ defx#do_action('cd')
   nnoremap <silent><buffer><expr> q defx#do_action('quit')
-  nnoremap <silent><buffer><expr> <Space> defx#do_action('toggle_select') . 'j'
+  "nnoremap <silent><buffer><expr> <Space> defx#do_action('toggle_select') . 'j'
   nnoremap <silent><buffer><expr> * defx#do_action('toggle_select_all')
   nnoremap <silent><buffer><expr> j line('.') == line('$') ? 'gg' : 'j'
   nnoremap <silent><buffer><expr> k line('.') == 1 ? 'G' : 'k'
@@ -191,13 +186,14 @@ endfunction
 "Defx set appearance
 call defx#custom#column('icon', {'directory_icon': '▸','opened_icon': '▾',})
 
-call defx#custom#option('_', {'winwidth': 20,
-      \'winheight': 11,
+call defx#custom#option('_', {'winwidth': 25,
+      \'winheight': 15,
       \'split': 'horizontal',
       \'direction': 'botright',
       \'show_ignored_files': 0,
+      \'columns': 'icon:indent:icons:filename',
       \'buffer_name': 'defxplorer',
       \'toggle': 1,
-      \'columns': 'icon:indent:icons:filename',
       \'resume': 1
       \})
+

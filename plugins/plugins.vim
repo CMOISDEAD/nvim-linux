@@ -1,10 +1,8 @@
 call plug#begin('~/.vim/plugged')
 " Themes
 Plug 'sainnhe/everforest'
+Plug 'morhetz/gruvbox'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-" "IDE
-Plug 'easymotion/vim-easymotion'
 
 "NERDTREE
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
