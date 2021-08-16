@@ -52,4 +52,4 @@ vnoremap < <gv
 vnoremap > >gv
 
 "Activate Plugins
-inoremap <leader>mo :IndentLinesToggle<CR>
+nmap <leader>mo :IndentBlanklineToggle<CR>

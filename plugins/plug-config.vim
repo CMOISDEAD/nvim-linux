@@ -1,7 +1,44 @@
 "import COC config
 source $HOME/.config/nvim/plugins/coc-config.vim
 
-"Airline
+"===Lualine and bufferline===
+lua <<EOF
+require'lualine'.setup {
+  options = {
+    icons_enabled = true,
+    theme = 'gruvbox',
+    component_separators = {'', ''},
+    section_separators = {'', ''},
+    disabled_filetypes = {}
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  extensions = {}
+}
+
+require("bufferline").setup{}
+
+require("indent_blankline").setup {
+    char = "|",
+    buftype_exclude = {"terminal", "No Name"}
+}
+EOF
+"===Airline===
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
@@ -25,13 +62,13 @@ let g:airline_symbols.linenr = ''
 " Always show tabs
 set showtabline=2
 
-"Git integration config
+"===Git===
 let g:signify_sign_add               = '+'
 let g:signify_sign_delete            = '_'
 let g:signify_sign_delete_first_line = '‾'
 let g:signify_sign_change            = '~'
 
-"emmet integration
+"===emmet===
 let g:user_emmet_leader_key='<C-Z>'
 
 "treesitter
@@ -70,8 +107,8 @@ if (has("termguicolors"))
 endif
 
 "Identline
-let g:indentLine_enabled = 0
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+"let g:indentLine_enabled = 0
+"let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 "Vim Startify
 let g:startify_custom_header =<< trim END

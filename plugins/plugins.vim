@@ -1,62 +1,57 @@
 call plug#begin('~/.vim/plugged')
-" Themes
+" ===Themes===
 Plug 'sainnhe/everforest'
 Plug 'morhetz/gruvbox'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-"NERDTREE
+"===FileManager===
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-icons'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-"More Highlighting
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+"===Highlighting===
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'sheerun/vim-polyglot'
+Plug 'lilydjwg/colorizer'
 
-"Airline
-Plug 'vim-airline/vim-airline'
+"===Bufferlines===
 Plug 'vim-airline/vim-airline-themes'
+Plug 'hoob3rt/lualine.nvim'
+Plug 'akinsho/nvim-bufferline.lua'
+"Plug 'vim-airline/vim-airline'
 
-" Stable version of coc
+"===Completion===
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-"Close pairs () [] {} ''
+"===Pairs===
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 
-"FZF
+"===FuzziFinder===
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim',
+Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 
-"Multiple cursor like in vscode
+"===MultipleCursor===
 Plug 'terryma/vim-multiple-cursors'
+Plug 'mattn/emmet-vim'
+Plug 'preservim/nerdcommenter'
 
-"Have the indent lines 
-Plug 'yggdroot/indentline'
-
-"Git Integration
+"===Git===
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 
-"Smooth srolling in vim
+"===Visual===
 Plug 'psliwka/vim-smoothie'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
+Plug 'lukas-reineke/indent-blankline.nvim'
+"Plug 'yggdroot/indentline'
 
-"Home
-"Plug 'mhinz/vim-startify'
+"===Home===
 Plug 'glepnir/dashboard-nvim'
-
-"Emmet
-Plug 'mattn/emmet-vim'
-
-"NERDCommenter
-Plug 'preservim/nerdcommenter'
-
-"Denite
-Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-
-"Colorizer
-Plug 'lilydjwg/colorizer'
+"Plug 'mhinz/vim-startify'
 call plug#end()
