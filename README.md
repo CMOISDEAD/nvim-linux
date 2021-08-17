@@ -4,25 +4,25 @@ A neovim configuration oriented to web development, inspired by doom emacs and s
 
 Still in development ❤️
 
-## Requerimientos
+## Requirements
 
-- Neovim 5.0+ (Si no es esa version algunos plugins no tienen soporte)
+- Neovim 5.0+
 - Node.js
 - Npm
 - Git
-- Gcc ( C/C++ compilador (Requerido por [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)) )
-- Vim-Plug
+- Gcc
+- Packer
 
-## Contenidos de la configuración
+## configuration contents
 
-- Nerdtree como FileManager
-- Git para ejecutar
-- Coc.vim y TreeSitter para el autocompletado
-- Airline para moverse entre varios archivos abiertos
-- IndentLines para tener las lineas de identado
-- EasyMotion
+- Nvim-tree like a file manager
+- Git
+- Coc.vim y TreeSitter for the auto completion
+- lualine like statusline
+- IndentBlankLines
+- NvimBufferLines like buffer tab
 - Auto-Pairs
 - Vim-CloseTags
 - Vim-Multiple-Cursors
 
-y mucho mas... ❤️👨‍💻🔥
+And more ... ❤️👨‍💻🔥
